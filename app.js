@@ -9,16 +9,25 @@ const quantity = document.querySelector('.quantity');
 minus.addEventListener('click',subtractItem);
 plus.addEventListener('click',addItem);
 
+
+
+let num = +quantity.textContent;
+input.value = num;
+num = input.value;
+
+
 //functions
 
 function subtractItem(){
-    let num = +quantity.textContent;
     num--;
+    input.value = num;
+    console.log(num);
     quantity.textContent = num;
 }
 
 function addItem(){
-    let num = +quantity.textContent;
     num++;
+    input.value = num;
+    console.log(num);
     quantity.textContent = num;
 }
